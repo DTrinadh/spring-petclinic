@@ -15,7 +15,7 @@ pipeline {
 
     stage('static analysis') {
       steps {
-        sh '''mvn clean verify -DskipTests=true sonar:sonar \\
+        sh '''./mvnw clean verify -DskipTests=true sonar:sonar \\
   -Dsonar.projectKey=tr-sonar-pet \\
   -Dsonar.host.url=http://43.205.108.233:9000 \\
   -Dsonar.login=sqp_ea7979adc57662613d9889aeafe2a91c468e5bfa'''
